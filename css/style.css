@@ -65,6 +65,10 @@ code, pre {
 
 
 
+main {
+    overflow: hidden;
+    width:100%;
+}
 
 
 /* navbar styling */
@@ -73,6 +77,8 @@ code, pre {
     background-color: var(--primary);
     color: #fff;
     height: 7rem;
+    width:100%;
+    /* border: var(--border); */
 }
 
 .navbar .flex {
@@ -207,6 +213,7 @@ code, pre {
 .stats {
     margin-top:6.25rem;
     animation: slideInFromBottom 1s ease-in-out;
+    width:100%;
 }
 
 .stats .stats-heading {
@@ -281,6 +288,10 @@ code, pre {
 
 /* languages styling */
 
+.languages {
+    width:100%;
+}
+
 .languages .flex {
     flex-wrap:wrap;
 }
@@ -304,6 +315,10 @@ code, pre {
 
 
 /* footer styling */
+
+.footer {
+    width:100%;
+}
 
 footer * a {
     color:#fff!important;
@@ -330,6 +345,12 @@ footer .social a {
 /* features page styling */
 
 /* features-head */
+
+.features-head, .features-sub-head, .features-head {
+    width:100%;
+}
+
+
 
 .features-head img, .features-sub-head img {
     width:12.5rem;
@@ -368,6 +389,10 @@ footer .social a {
 
 
 /* docs-head */
+
+.docs-head, .docs-main {
+    width:100%
+}
 
 .docs-head img{
     width:12.5rem;
@@ -460,6 +485,24 @@ footer .social a {
 
 /* animations */
 
+@media (max-width:976px) {
+
+    .showcase {
+        height: auto;
+    }
+    .showcase .grid{
+        grid-template-columns: 100%;
+    }
+
+    .showcase-text {
+        padding:2rem 0;
+    }
+
+    .showcase .showcase-form {
+        justify-self: flex-start;
+        top:2rem;
+    }
+}
 
 
 
@@ -489,10 +532,6 @@ footer .social a {
     }
 
 
-    .showcase {
-        height: auto;
-    }
-
     .showcase .showcase-text {
         text-align: center;
         margin-top:2.5rem;
@@ -500,7 +539,7 @@ footer .social a {
     }
 
     .showcase .showcase-form {
-        top:2rem;
+        justify-self: center;
         animation: slideInFromBottom 1s ease-in-out;
     }
 
@@ -536,7 +575,7 @@ footer .social a {
 
 @media (max-width:500px) {
 
-    body {
+    :root {
         font-size: 90%;
     }
 
@@ -559,6 +598,31 @@ footer .social a {
         background-color: rgba(0, 0, 0, 0.09);
         margin: .5rem 0 1.5rem 0;
         border-radius: .5rem;
+    }
+}
+
+@media (max-width:400px) {
+    :root {
+        font-size: 70%;
+    }
+
+    .showcase-form {
+        width: 22rem;
+        height: auto;
+    }
+}
+
+@media (max-width:250px) {
+    :root {
+        font-size: 50%;
+    }
+
+    .showcase-form {
+        width: 15rem;
+    }
+
+     .btn {
+        padding: 0.2rem 1.3rem;
     }
 }
 
