@@ -1,0 +1,568 @@
+@import url(../font.css);
+
+
+
+/* reset classes */
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+
+    font-size: 100%;
+
+    /* fonts */
+
+    --lato: "Lato", cursive;
+    --Abel: "Abel", cursive;
+    --Anton: "Anton", cursive;
+    --Josefin: "Josefin", cursive;
+    --Lexend: "Lexend", cursive;
+    --Livvic: "Livvic", cursive;
+    --ComicNeue: "ComicNeue", cursive;
+    --jokerman: "jokerman", cursive;
+
+    /* end of fonts */
+    --primary: #F04101;
+    --secondary: #BD3301;
+    --dark: #691C00;
+    --darker: #240A00;
+    --light: #eee;
+    --success: #5cb85c;
+    --danger: #d9534f;
+    --border: 1px solid black;
+
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin:1rem 0;
+}
+
+p  {margin: .6rem 0}
+
+a {color: #333;}
+
+img {width: 100%}
+
+code, pre {
+    background-color: #333;
+    color:#fff;
+    padding:0.6rem;
+    border-radius: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+/* end of reset classes */
+
+
+
+
+
+/* navbar styling */
+
+.navbar {
+    background-color: var(--primary);
+    color: #fff;
+    height: 7rem;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar .logo {
+    font-size: 3rem;
+    font-family: var(--Livvic);
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul a {
+    color: #fff;
+    padding:0.6rem;
+    margin: 0 0.31rem;
+}
+
+
+.navbar ul a:hover  {
+    border-bottom: 2px #fff solid;
+    
+}
+
+.active {
+    border-top: 2px #000 solid;
+}
+
+
+/* end of nav-bar styling */
+
+
+/* showcase styling */
+
+
+.showcase {
+    height: 25rem;
+    background-color: var(--primary);
+    color: #fff;
+    position: relative;
+    width:100%;
+}
+
+
+.showcase::before, .showcase::after {
+    content: "";
+    position: absolute;
+    height: 6.25rem;
+    bottom: -4.35rem;
+    right:0;
+    left:0;
+    background-color: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    gap: 1.87rem;
+    overflow: visible;
+}
+
+.showcase .showcase-text {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+
+.showcase .showcase-text h1 {
+    font-size: 2.5rem;
+}
+
+.showcase .showcase-text p {
+    margin: 1.25rem 0;
+}
+
+.showcase .btn-outline {
+    background-color: transparent;
+    border: 1px #fff solid;
+}
+
+.btn:hover {
+    transform: scale(.95);
+}
+
+.showcase-form {
+    position: relative;
+    top:3.75rem;
+    height: 21.87rem;
+    width: 25rem;
+    padding:2.5rem;
+    z-index: 100;
+    justify-self: flex-end;
+    transition: transform 0.3s ease-in-out;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.showcase-form:hover {
+    transform: scale(1.1);
+}
+
+.showcase-form .form-control {
+    margin: 1.87rem 0;
+}
+
+.showcase-form input[type="text"], .showcase-form input[type="email"] {
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    width:100%;
+    padding:3px;
+    font-size: 1rem;
+}
+
+.showcase-form input[type="text"]:focus, .showcase-form input[type="email"]:focus {
+    outline:none;
+}
+
+
+/* end of showcase styling */
+
+
+/* Stats styling */
+
+
+.stats {
+    margin-top:6.25rem;
+    animation: slideInFromBottom 1s ease-in-out;
+}
+
+.stats .stats-heading {
+    max-width: 40rem;
+    margin:4rem auto;
+    font-size: 1.5rem;
+}
+
+.stats .grid h3 {
+    font-size: 2.1rem;
+}
+
+.stats .grid p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: var(--Livvic);
+
+}
+
+/* end of stats styling */
+
+
+/*  Cli styling */
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width:100%;
+}
+
+.cli .card {
+    text-align: center;
+    background-color: #002240;
+    color:#79C7CC;
+    transition:transform .3s ease-in;
+}
+
+.cli .card:hover {
+    transform: scale(1.05);
+}
+
+.cli .card h3 {
+    font-size:1rem;
+}
+
+
+
+.cli .grid > :first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* end of CLI styling */
+
+
+/* cloud styling */
+
+.cloud {
+    width:100%;
+}
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+.cloud a {
+    background-color: transparent;
+    border:1px solid #fff;
+}
+
+/* end of cloud styling */
+
+/* languages styling */
+
+.languages .flex {
+    flex-wrap:wrap;
+}
+
+.languages .container .card {
+    text-align: center;
+    margin: 1.1rem 0.6rem 2.5rem;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .container .card:hover {
+    transform: translateY(-1rem);
+}
+
+.languages .container .card h4 {
+    font-size: 1.24rem;
+    margin-bottom: 0.7rem;
+}
+
+/* end of languages styling */
+
+
+/* footer styling */
+
+footer * a {
+    color:#fff!important;
+}
+
+footer h1 {
+    font-family: var(--Livvic);
+    font-size: 3rem;
+}
+
+footer nav li {
+    margin:1rem 0;
+}
+
+footer .social a {
+    margin: 0 0.6rem;
+    font-size: .8rem!important;
+}
+
+/* end of footer styling */
+
+
+
+/* features page styling */
+
+/* features-head */
+
+.features-head img, .features-sub-head img {
+    width:12.5rem;
+    justify-self: flex-end;
+}
+
+/* end of features-head */
+
+
+
+/* features-main */
+
+.features-main .card > span {
+    margin-right: 1.25rem;
+}
+
+.features-main .grid :first-child {
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid :nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* end of features main */
+
+
+
+/* end of features page styling */
+
+
+
+
+
+/* docs page styling */
+
+
+/* docs-head */
+
+.docs-head img{
+    width:12.5rem;
+    justify-self: flex-end;
+}
+
+.docs-main h3 {
+    margin: 1.4rem 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 1.03rem;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+    border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+/* end of docs-head */
+
+
+
+/* end of docs page styling */
+
+
+
+
+
+
+/* animations */
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* animations */
+
+
+
+
+
+
+
+
+/* tablet media queries */
+
+@media (max-width: 768px) {
+
+    .grid, .showcase .grid, .stats .grid, .cli .grid, .cloud .grid, .features-main .grid, .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .features-head, .features-sub-head, .docs-head {
+        text-align: center;
+    }
+
+    .features-head img, .features-sub-head img, .docs-head img {
+        justify-self: center;
+    }
+
+    .features-main .grid :first-child, .features-main .grid :nth-child(2) {
+        grid-column: 1;
+    }
+
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase .showcase-text {
+        text-align: center;
+        margin-top:2.5rem;
+        animation: slideInFromTop 1s ease-in-out;
+    }
+
+    .showcase .showcase-form {
+        top:2rem;
+        animation: slideInFromBottom 1s ease-in-out;
+    }
+
+    .stats {
+        animation: none;
+    }
+    
+    .showcase .showcase-form:hover {
+        transform: scale(1.03);
+    }
+
+    .cli .grid > :first-child{
+        grid-column: 1 ;
+        grid-row: 1 ;
+    }
+
+    footer .grid {
+        text-align: center;
+    }
+
+    footer .grid > div {
+        margin:1rem 0;
+    }
+
+}
+
+/* end of tablet media queries */
+
+
+
+
+/* mobile media queries */
+
+@media (max-width:500px) {
+
+    body {
+        font-size: 90%;
+    }
+
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar .logo {
+        margin-top:2rem;
+        text-transform: uppercase;
+    }
+
+    .navbar ul {
+        padding:1rem;
+        background-color: rgba(0, 0, 0, 0.09);
+        margin: .5rem 0 1.5rem 0;
+        border-radius: .5rem;
+    }
+}
+
+
+
+/* end of mobile media queries */
+

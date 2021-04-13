@@ -1,0 +1,188 @@
+
+.container {
+    max-width: 68.75rem;
+    width:100%;
+    margin:0 auto;
+    overflow: hidden;
+    padding:0 2.5rem;
+}
+
+
+.flex { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body {
+
+    font-family: var(--lato);
+    color:#333;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    padding:1.25rem;
+    margin:0.62rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.67rem 1.87rem;
+    cursor: pointer;
+    background-color: var(--secondary);
+    color:#fff;
+    border:none;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* margins */
+.my-1 {margin:1rem 0;}
+.my-2 {margin:1.5rem 0;}
+.my-3 {margin:2rem 0;}
+.my-4 {margin:3rem 0;}
+.my-5 {margin:4rem 0;}
+
+.m-1 {margin:1rem}
+.m-2 {margin:1.5rem}
+.m-3 {margin:2rem}
+.m-4 {margin:3rem}
+.m-5 {margin:4rem}
+/* end of margins */
+
+/* padding */
+.py-1 {padding:1rem 0;}
+.py-2 {padding:1.5rem 0;}
+.py-3 {padding:2rem 0;}
+.py-4 {padding:3rem 0;}
+.py-5 {padding:4rem 0;}
+
+.p-1 {padding:1rem}
+.p-2 {padding:1.5rem}
+.p-3 {padding:2rem}
+.p-4 {padding:3rem}
+.p-5 {padding:4rem}
+/* padding */
+
+
+/* Backgrounds and coloured buttons */
+
+.bg-primary, .btn-primary { 
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.bg-secondary, .btn-secondary { 
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.bg-dark, .btn-dark { 
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.bg-darker, .btn-darker { 
+    background-color: var(--darker);
+    color: #fff;
+}
+
+
+
+.bg-light, .btn-light { 
+    background-color: var(--light);
+    color: #333;
+}
+
+
+/* end of Backgrounds and coloured buttons */
+
+
+/* text sizes */
+
+.lead {font-size: 1.25rem;}
+
+.sm {font-size: 1rem;}
+
+.md {font-size: 2rem;}
+
+.lg {font-size: 2.5rem;}
+
+.xl {font-size: 4rem;}
+
+
+/* end of text sizes */
+
+
+
+
+/* utilities for docs page */
+
+.alert {
+    background-color: var(--light);
+    padding: 0.67rem 1.25rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.alert-success {
+    background-color: var(--success);
+    color:#fff;
+}
+
+.alert-danger {
+    background-color: var(--danger);
+    color:#fff;
+}
+
+
+
+/* contextual colors */
+.text-primary{ 
+    color: var(--primary);
+}
+
+.text-secondary{ 
+    color: var(--secondary);
+}
+
+.text-dark{ 
+    color: var(--dark);
+}
+
+.text-darker{ 
+    color: var(--darker);
+}
+
+
+
+.text-light{ 
+    color: var(--light);
+}
+
+
+/* end of contextual colors */
+
+/* end of utilities for docs page */
